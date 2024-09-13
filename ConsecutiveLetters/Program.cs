@@ -11,8 +11,7 @@ namespace ConsecutiveLetters
             //check if a given string contains two similar consecutive letters
 
             Console.WriteLine("Enter a string that may or may not contain consecutive letters:");
-           // string? userInput = Console.ReadLine();
-
+            
             bool UserInput(string? userInput)
             {
                 for (int i = 1; i < userInput?.Length; i++)
