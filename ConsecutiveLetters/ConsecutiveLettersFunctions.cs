@@ -14,12 +14,12 @@ namespace ConsecutiveLetters
 
             if (userInput.Length <= 2)
             {
-                throw new ArgumentException("Enter a word that is more than two characters long!");
+                throw new ArgumentException("Enter a word that is at least two characters long!");
             }
 
-            if (Regex.IsMatch(userInput, @"^[a-zA-Z]+$"))
+            if (Regex.IsMatch(userInput, @"^[\d\W]+$"))
             {
-                throw new ArgumentException("Please, enter only letters, no other characters!");
+                throw new ArgumentException("Please, enter only letters, no digits or non-alphanumeric characters!");
             }
         }
     }
