@@ -16,29 +16,7 @@ namespace ConsecutiveLetters
                 var userInput = Console.ReadLine();
                 ConsecutiveLettersFunctions consecutiveLettersFunctions = new ConsecutiveLettersFunctions();
                 consecutiveLettersFunctions.Validate(userInput);
-
-                bool hasConsecutiveLetters = false;
-                for (int i = 1; i < userInput?.Length; i++)
-                {
-                    if (userInput[i] == userInput[i - 1])
-                    {
-                        hasConsecutiveLetters = true;
-                        break;
-                    }
-                    else
-                    {
-                        hasConsecutiveLetters = false;
-                    }
-                }
-
-                if (hasConsecutiveLetters)
-                {
-                    Console.WriteLine("Your word has consecutive letters!");
-                }
-                else
-                {
-                    Console.WriteLine("Your word has no consecutive letters!");
-                }
+                //consecutiveLettersFunctions.MainLogic(userInput);
             }
             catch (ArgumentException ex)
             {

@@ -22,5 +22,31 @@ namespace ConsecutiveLetters
                 throw new ArgumentException("Please, enter only letters, no digits or non-alphanumeric characters!");
             }
         }
+
+        public string MainLogic(string? userInput)
+        {
+            bool hasConsecutiveLetters = false;
+            for (int i = 1; i < userInput?.Length; i++)
+            {
+                if (userInput[i] == userInput[i - 1])
+                {
+                    hasConsecutiveLetters = true;
+                    break;
+                }
+                else
+                {
+                    hasConsecutiveLetters = false;
+                }
+            }
+
+            if (hasConsecutiveLetters)
+            {
+                return "Your word has consecutive letters!";
+            }
+            else
+            {
+                return "Your word has no consecutive letters!";
+            }
+        }
     }
 }
